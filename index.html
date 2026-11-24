@@ -12,8 +12,7 @@
 <script>
 const KEY='chunky_v03_user';
 let user=JSON.parse(localStorage.getItem(KEY)||'null');
-const mascot='<img class="mascot-small" src="assets/B47F0CEC-D070-4C0F-949C-13F725FFEF79.png
-" alt="Chunky — оленёнок-учитель">';
+const mascot='<img class="mascot-small" src="assets/B47F0CEC-D070-4C0F-949C-13F725FFEF79.png" alt="Chunky — оленёнок-учитель">';
 function header(){return `<header class="wrap top"><div class="brand">Chunky Chunky<br>English<small>LEARN · PLAY · GROW</small></div><nav class="nav"><button onclick="welcome()">⌂ Главная</button><button onclick="about()">О курсе</button><button onclick="about()">Возможности</button></nav><div><span class="pill">🌐 RU</span> <button class="soft" onclick="login()">Войти</button></div></header>`}
 function welcome(){document.getElementById('app').innerHTML=header()+`
 <main class="wrap"><section class="hero"><div class="hero-copy"><span class="badge">⭐ Изучай английский по-новому</span><h1>Chunky Chunky<br>English</h1><div class="tagline">Учись. Практикуй. Говори!</div><p>Современный английский, полезные чанки, живой сленг и интерактивные уроки с милым оленёнком Chunky!</p><button class="green" onclick="register()">Начать обучение →</button></div><div class="hero-mascot"><img src="assets/chunky-mascot.png" alt="Chunky, твой оленёнок-учитель"></div><div class="signup"><h2>Присоединяйся!</h2><p>Создай аккаунт и начни свой путь к свободному английскому 🚀</p><input id="quickName" class="field" placeholder="Имя пользователя"><input id="quickEmail" class="field" type="email" placeholder="Email"><input id="quickPass" class="field" type="password" placeholder="Пароль (от 6 символов)"><div id="quickError" class="error"></div><button class="green" onclick="quickRegister()">Зарегистрироваться</button><div class="switch">Уже есть аккаунт? <button class="link" onclick="login()">Войти →</button></div></div></section>
